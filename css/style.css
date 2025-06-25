@@ -4827,7 +4827,7 @@ img {
     display: none;
   }
   .necessary {
-    color: red;
+    color: #e00064;
     margin: 0px 0.2em;
   }
   .formGrid .formGrp {
