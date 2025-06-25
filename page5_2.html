@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+  <meta name="robots" content="noindex" />
+  <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>內政部移民署申審系統 </title>
+
+  <!-- style css -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- favicon -->
+  <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- 直接跳主內容區 -->
+  <a class="goCenter" href="#center">按Enter到主內容區</a>
+  <button class="sidebarCtrlBtn" type="button" aria-expanded="false" aria-controls="mobileArea">側欄選單</button>
+  <!-- wrapper Start -->
+  <div class="wrapper">
+    <!-- header Start -->
+    <header class="header">
+      <div class="container">
+        <div class="headergroup">
+          <!-- navigation End -->
+          <h1>
+            <a href="index.html"><img src="images/logo.png" alt="網站標題" /></a>
+          </h1>
+          <!-- navigation Start -->
+          <nav class="navigation" role="navigation" aria-label="頁首功能列">
+            <!-- 登出入時間 -->
+            <div class="timeBlock">
+              <div class="loginTime">上次登入時間：2024/11/04 08:06:41</div>
+              <div class="logoutTime">登出倒數：24:16</div>
+            </div>
+            <!-- 人員 -->
+            <div class="whoIs"><span class="name">楊臨櫃</span><span>歡迎使用</span></div>
+          </nav>
+        </div>
+        <!-- noscript -->
+        <noscript>
+          您的瀏覽器不支援JavaScript語法，JavaScript語法並不影響內容的陳述。您可使用按鍵盤上的Ctrl鍵+ (+)鍵放大/(-)鍵縮小來改變字型大小；回到上一頁可使用瀏覽器提供的 Alt+左方向鍵(←) 快速鍵功能；列印可使用瀏覽器提供的(Ctrl+P)功能。您的瀏覽器，不支援script語法，若您的瀏覽器無法支援請點選此超連結
+          <a href="#">網站導覽</a>
+        </noscript>
+        <!-- menu Start -->
+        <nav class="menu mainMenu" role="navigation" aria-label="About page">
+          <ul>
+            <li>
+              <a href="#">系統公告</a>
+            </li>
+            <li><a href="#">發證下載</a></li>
+            <li>
+              <a href="#">系統管理</a>
+              <ul>
+                <li><a href="#">權限控管</a></li>
+                <li><a href="#">稽核紀錄</a></li>
+                <li><a href="#">公佈欄管理</a></li>
+              </ul>
+            </li>
+
+          </ul>
+        </nav>
+        <!-- menu End -->
+      </div>
+    </header>
+    <!-- header End -->
+    <!-- main Start -->
+    <main id="center" class="main innerPage">
+      <!-- 內頁新增一個classname-->
+      <!-- breadcrumb路徑 -->
+      <div aria-label="Breadcrumb" class="breadcrumb">
+        <ul>
+          <li><a href="#">臨櫃收件</a></li>
+          <li><a href="#">大陸地區人民</a></li>
+          <li aria-current="page">新申請</li>
+        </ul>
+      </div>
+      <div class="container">
+
+        <!-- 如果不要sticky效果，就移除stickySidebar classname -->
+        <aside class="leftBlock">
+          <div class="sidebar__inner">
+            <button type="button" class="close_leftblockbtn">收合左欄</button>
+            <div class="nodeMenu">
+              <ul>
+                <li>
+                  <a href="#">進度查詢</a>
+                  <ul>
+                    <li>
+                      <a href="#">申請案查詢</a>
+                    </li>
+                    <li>
+                      <a href="#">延期查詢</a>
+                    </li>
+                    <li>
+                      <a href="#">原名檔查詢</a>
+                    </li>
+                    <li>
+                      <a href="#">持外照簽證檔查詢</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">在臺停留天數查詢</a>
+                  <ul>
+                    <li>
+                      <a href="#">入出境天數計算</a>
+                    </li>
+                    <li>
+                      <a href="#">計算居留日期天數</a>
+                    </li>
+                    <li>
+                      <a href="#">外僑居留天數計算</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">重要查核資料查詢</a>
+                  <ul>
+                    <li>
+                      <a href="#">外人居停留查詢</a>
+                    </li>
+                    <li>
+                      <a href="#">指紋卡收件查詢</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+        <!-- 主要內容區 -->
+        <div class="centerBlock">
+
+          <!-- h2節點 -->
+          <h2 class="title">新申請</h2>
+          <form action="">
+            <section class="formBlock">
+              <h3 class="title">單筆案件</h3>
+              <div class="informationContent">
+                <div class="title">基本資料</div>
+                <div class="explain_required">以下皆為必填</div>
+                <div class="flexForm formGrid">
+                  <div class="formGrp">
+                    <label for="address" class="formTitle"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>申請類別</label>
+                    <div class="formContent" id="fake-legend">
+                      <div class="radioGrp formInline">
+                        <label> <input type="radio" name="sampleRadio5" value="" checked="" />入出境</label>
+                        <label> <input type="radio" name="sampleRadio5" title="其他" value="" />居留</label>
+                        <label> <input type="radio" name="sampleRadio5" title="無" value="" />定居</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="address" class="formTitle"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>申請所在</label>
+                    <div class="formContent" id="fake-legend">
+                      <div class="radioGrp formInline">
+                        <label> <input type="radio" name="sampleRadio5" value="" checked="" />境內</label>
+                        <label> <input type="radio" name="sampleRadio5" title="其他" value="" />境外</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="selectSample" class="formTitle"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>申請項目</label>
+                    <div class="formContent formInline">
+                      <select id="selectSample" name="">
+                        <option value="">大陸地區配偶申請來臺依親居留</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="address" class="formTitle"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>初次申請</label>
+                    <div class="formContent" id="fake-legend">
+                      <div class="radioGrp formInline">
+                        <label> <input type="radio" name="sampleRadio5" value="" checked="" />是</label>
+                        <label> <input type="radio" name="sampleRadio5" title="其他" value="" />否</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="selectSample" class="formTitle"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>身分證號</label>
+                    <div class="formContent formInline">
+                      <select id="selectSample" name="">
+                        <option value="">統一證號</option>
+                        <option value="">大陸身分證號</option>
+                        <option value="">港澳身分證號</option>
+                      </select>
+                      <input name="password" type="password" title="請輸入證號" placeholder="54236546332626" />
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <label for="address" class="formTitle"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>姓名</label>
+                    <div class="formContent">
+                      <input name="password" type="password" title="請輸入姓名" placeholder="林試範" />
+                    </div>
+                  </div>
+                  <div class="formGrp">
+                    <div class="formTitle">出生日期</div>
+                    <div class="formContent">
+                      <input name="" type="date" value="" class="calendar" placeholder="出生日期" title="出生日期" />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </section>
+            <div class="btnGrp formInline">
+              <button type="button" class="darkBtn btnXl">回上頁</button>
+              <button type="button" class="lightBtn btnXl">下一步</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <!-- footer Start-->
+    <footer>
+      <div class="container">
+
+        <div class="footerInfo">
+          <p>
+            中華民國內政部移民署 版權所有 © NATIONAL IMMIGRATION AGENCY
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- footer End -->
+  </div>
+  <a href="javascript:;" class="scrollToTop" role="button">回頁首</a>
+
+  <!-- lazyload -->
+  <script src="vendor/lazyload/lazyload.js"></script>
+  <!-- fancybox -->
+  <script src="vendor/fancybox/fancybox.umd.js"></script>
+  <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+  <!-- swiper -->
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- main js-->
+  <script src="js/main.js"></script>
+  <!-- js -->
+  <script src="js/customize.js"></script>
+</body>
+
+</html>

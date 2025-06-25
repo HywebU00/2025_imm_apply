@@ -1,0 +1,32 @@
+.breadcrumb {
+  padding: 30px 60px;
+  font-size: 1.125em;
+  margin: 0px auto 5px;
+  flex: 1 1 auto;
+  flex-basis: 100%;
+  max-width: 100%;
+
+  ul {
+    @include liReset;
+    display: flex;
+    flex-flow: row wrap;
+    background-image: url('../images/breadcrumb_icon.png');
+    background-position: 0 3px;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    li {
+      margin: 0px 0.1em 0.1em 0px;
+      color: $colorPurple;
+      font-weight: bold;
+      & + li {
+        &:before {
+          @extend %slash;
+        }
+      }
+    }
+  }
+  a {
+    @include aSetting($colorWord);
+    font-weight: normal;
+  }
+}

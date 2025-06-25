@@ -1,0 +1,94 @@
+//按鈕樣式
+.lightBtn {
+  background: #58549d;
+  background: linear-gradient(180deg, rgba(88, 84, 157, 1) 0%, rgba(48, 35, 85, 1) 100%);
+  border-radius: 50px;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 1.375rem;
+  font-weight: 500;
+  border: none;
+
+  &:hover {
+    box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+  }
+}
+.darkBtn {
+  background: #70798d;
+  background: linear-gradient(180deg, rgba(112, 121, 141, 1) 0%, rgba(85, 98, 128, 1) 100%);
+  border-radius: 50px;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 1.375rem;
+  font-weight: 500;
+  border: none;
+
+  &:hover {
+    box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+  }
+}
+.btnXl {
+  padding: 16px 50px;
+  min-width: 300px;
+}
+.btnGrp {
+  &.formInline {
+    justify-content: center;
+    .btnXl {
+      padding: 16px 40px;
+      min-width: 250px;
+    }
+  }
+  &.flexleft {
+    justify-content: flex-start;
+    margin-left: 175px;
+  }
+}
+.formBlock {
+  background-color: #fff;
+  border-radius: 5px 5px 40px 40px;
+  box-shadow: 0 5px 10px rgba(9, 11, 36, 0.3);
+  margin-bottom: 40px;
+  h3.title {
+    background-color: $colorPrimary;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.125em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    border-radius: 5px 5px 0 0;
+    margin: 0 0 40px;
+  }
+  .informationContent {
+    padding: 0 60px 60px;
+    position: relative;
+    .title {
+      font-size: 1.5em;
+      color: $colorLink;
+      padding: 0 0 15px 30px;
+      position: relative;
+      font-weight: bold;
+      border-bottom: 3px solid #e6e6e6;
+      &:before {
+        content: '';
+        width: 7px;
+        height: 24px;
+        position: absolute;
+        left: 3px;
+        top: 0;
+        background: #326fcb;
+        background: linear-gradient(180deg, rgba(50, 111, 203, 1) 0%, rgba(72, 48, 163, 1) 100%);
+      }
+    }
+  }
+}
+.explain_required {
+  color: $colorImportant;
+  position: absolute;
+  right: 60px;
+  top: 0;
+  font-weight: bold;
+}

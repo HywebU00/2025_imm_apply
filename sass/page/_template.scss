@@ -1,0 +1,208 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  // font-size: #{$remFontSize}px;
+  scroll-behavior: smooth;
+
+  // --變更為全站
+  &.smallSize {
+    font-size: 0.938em;
+  }
+
+  &.largeSize {
+    font-size: 1.125em;
+  }
+}
+
+body {
+  min-height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background: #dfe8f4;
+  background-image: url('../images/mpbgright.png'), url('../images/mpbgleft.png'), radial-gradient(circle 35vw at 95% 95%, rgba(233, 238, 247, 1) 0%, rgba(233, 238, 247, 0) 100%), radial-gradient(circle 140vw at 100% 5%, rgba(113, 113, 213, 1) 0%, rgba(223, 232, 244, 0) 44%),
+    radial-gradient((circle 140vw at 5% 95%, rgba(56, 102, 181, 1) 5%, rgba(118, 189, 220, 1) 27%, rgba(219, 230, 241, 1) 52%));
+
+  background-repeat: no-repeat;
+  background-position: right 400px, left top, 0 0, 0 0, 0 0;
+
+  // @media (max-width: 1200px) {
+  //   background-size: 80%, 80%, contain, contain, contain, contain, contain;
+  // }
+  &.noscroll {
+    position: static;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.row {
+  @include makeRow();
+
+  & > div {
+    box-sizing: border-box;
+  }
+}
+
+// 最外圍預設為100%
+.wrapper {
+  width: 100%;
+  margin: 0px auto;
+
+  @include screen('mobile') {
+    overflow: hidden;
+    overflow-y: auto;
+  }
+}
+
+// 整體共用container樣式，請注意首頁切版頁面的整齊
+.container {
+  margin: 0 auto;
+  max-width: $containerMax; //請看_variable.scss
+  position: relative;
+  @include containerFixed;
+}
+
+.main {
+  position: relative;
+  margin: 0 auto 5em;
+
+  @include screen('mobile') {
+    padding-top: 60px;
+  }
+
+  // 可先設定一個中央區塊最大寬，限制accessKey對齊
+  h2 {
+    line-height: 1.25em;
+  }
+}
+
+////////////////////////////////////////////////////////////
+// 為了與首頁區隔，請在內頁加上innerPage ClassName
+.innerPage {
+  & > .container {
+    padding-top: 0;
+    @include gutter(0); //gutter 代表左右要留白
+    display: flex;
+  }
+
+  .centerBlock {
+    flex: none;
+    flex-basis: 100%;
+    max-width: 100%;
+    padding-right: 60px;
+  }
+
+  .leftBlock {
+    flex: none;
+    flex-basis: 300px;
+    max-width: 300px;
+    margin-right: 40px;
+    align-self: flex-start;
+    position: relative;
+    transition: all 0.3s ease;
+    background-color: $colorPrimary;
+    border-radius: 0 40px 40px 0;
+
+    &.lefthidden {
+      flex-basis: 40px;
+      max-width: 40px;
+      overflow: hidden;
+      height: 80vh;
+      & + .centerBlock {
+        flex: auto;
+        flex-basis: calc(100% - 80px);
+        max-width: calc(100% - 80px);
+      }
+      .close_leftblockbtn {
+        &:before {
+          transform: rotate(135deg);
+          left: calc(50% - 12px);
+        }
+      }
+    }
+
+    & + .centerBlock {
+      flex: auto;
+      flex-basis: calc(100% - 280px - 40px);
+      max-width: calc(100% - 280px - 40px);
+      // flex-grow: 1;
+    }
+
+    @include screen('tablet') {
+      // display: none;
+      // flex-basis: 40px;
+      // max-width: 40px;
+      // overflow: hidden;
+      // height: 80vh;
+      position: absolute;
+      // top: 110px;
+      z-index: 99;
+
+      & + .centerBlock {
+        flex: none;
+        flex-basis: 100%;
+        max-width: 100%;
+        padding-right: 30px;
+        padding-left: 60px;
+      }
+      &.lefthidden {
+        & + .centerBlock {
+          flex: auto;
+          flex-basis: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+    @include screen('mobile') {
+      top: 0px;
+    }
+    .close_leftblockbtn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      font-size: 0;
+      width: 40px;
+      height: 100%;
+      background-color: $colorPrimary;
+      border-radius: 50%;
+      background-color: transparent;
+      border: none;
+      z-index: 9;
+
+      &:before {
+        content: '';
+        border: 2px solid #fff;
+        width: 12px;
+        height: 12px;
+        border-right: none;
+        border-bottom: none;
+        position: absolute;
+        transform: rotate(-45deg);
+        top: calc(50% - 6px);
+        left: calc(50% - 6px);
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+// 文章標題
+
+h2.title {
+  font-size: 2.25em;
+  line-height: 2.25em;
+  margin: 0 0 40px;
+  color: $colorLink;
+  text-align: center;
+}
